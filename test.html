@@ -1,0 +1,1080 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<style type="text/css">
+		#_head_p{width:100%;height:100px;}
+		#_body_p{width:100%;margin-top:10px;}
+	</style>
+	<style type="text/css">
+		.arrow_box {
+	position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #88b7d5;
+	border-width: 50px;
+	margin-left: -50px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #c2e1f5;
+	border-width: 56px;
+	margin-left: -56px;
+}
+	</style>
+	<style type="text/css">
+		.arrow_box_left {
+	position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+}
+.arrow_box_left:after, .arrow_box_left:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box_left:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-right-color: #88b7d5;
+	border-width: 50px;
+	margin-top: -50px;
+}
+.arrow_box_left:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-right-color: #c2e1f5;
+	border-width: 56px;
+	margin-top: -56px;
+}
+	</style>
+</head>
+<body>
+	<div id="_js_root_animation">
+	</div>
+	<div id="_head_p">
+	</div>
+	<div id="_js_root_animation_off"></div>
+		<script type="text/babel">
+	
+
+
+
+			class PricingPopup extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						hola:["hi","bpo","2","3"],
+						needToUnmount:true,
+						entered:false,
+						ml:this.props.Ml
+					};
+					this._mm_gota_out_pricing=this._mm_gota_out_pricing.bind(this);
+					this._mm_enter_chk_unmt=this._mm_enter_chk_unmt.bind(this);
+					this._mn_ent_mouse_chk=this._mn_ent_mouse_chk.bind(this);
+				}
+				_mn_ent_mouse_chk(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							entered:true
+						});
+				}
+				_mm_enter_chk_unmt(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							needToUnmount:false
+						});
+				}
+				_mm_gota_out_pricing(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					console.log("out");
+					ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'));
+					/*this.setState({
+							entered:false
+						});
+					console.log(this.state.needToUnmount)
+					if(this.state.needToUnmount && this.state.entered){
+						console.log(this.state.needToUnmount)
+						ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'));
+					}*/
+				}
+				render(){
+					return (
+						<div style={{width:"25%",height:"350px",position:"absolute",marginLeft:this.state.ml,backgroundColor:"white"}} onMouseEnter={this._mn_ent_mouse_chk} onMouseLeave={this._mm_gota_out_pricing}>
+							{
+								this.state.hola.map( (a,b) => {
+										return (
+											<div key={b} style={{width:"100%",height:"60px"}} onMouseEnter={this._mm_enter_chk_unmt}>{a}</div>
+										)
+									} )
+							}
+						</div>
+					);
+				}
+			}
+
+
+
+			class BpoPopup extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						hola:["hi","bpo","2","3"],
+						needToUnmount:true,
+						entered:false,
+						ml:this.props.Ml
+					};
+					this._mm_gota_out_bpo=this._mm_gota_out_bpo.bind(this);
+					this._mm_enter_chk_unmt=this._mm_enter_chk_unmt.bind(this);
+					this._mn_ent_mouse_chk=this._mn_ent_mouse_chk.bind(this);
+				}
+				_mn_ent_mouse_chk(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							entered:true
+						});
+				}
+				_mm_enter_chk_unmt(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							needToUnmount:false
+						});
+				}
+				_mm_gota_out_bpo(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					console.log("out");
+					ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'));
+					/*this.setState({
+							entered:false
+						});
+					console.log(this.state.needToUnmount)
+					if(this.state.needToUnmount && this.state.entered){
+						console.log(this.state.needToUnmount)
+						ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'));
+					}*/
+				}
+				render(){
+					return (
+						<div style={{width:"25%",height:"350px",position:"absolute",marginLeft:this.state.ml,backgroundColor:"white"}} onMouseEnter={this._mn_ent_mouse_chk} onMouseLeave={this._mm_gota_out_bpo}>
+							{
+								this.state.hola.map( (a,b) => {
+										return (
+											<div key={b} style={{width:"100%",height:"60px"}} onMouseEnter={this._mm_enter_chk_unmt}>{a}</div>
+										)
+									} )
+							}
+						</div>
+					);
+				}
+			}
+
+			
+
+			class ConsultancyPopUp extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						hola:["hi","1","2","3"],
+						needToUnmount:true,
+						entered:false,
+						ml:this.props.Ml
+					};
+					this._mm_gota_out_consultancy=this._mm_gota_out_consultancy.bind(this);
+					this._mm_enter_chk_unmt=this._mm_enter_chk_unmt.bind(this);
+					this._mn_ent_mouse_chk=this._mn_ent_mouse_chk.bind(this);
+				}
+				_mn_ent_mouse_chk(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							entered:true
+						});
+				}
+				_mm_enter_chk_unmt(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							needToUnmount:false
+						});
+				}
+				_mm_gota_out_consultancy(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					console.log("out");
+					ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'));
+					/*this.setState({
+							entered:false
+						});
+					console.log(this.state.needToUnmount)
+					if(this.state.needToUnmount && this.state.entered){
+						console.log(this.state.needToUnmount)
+						ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'));
+					}*/
+				}
+				render(){
+					return (
+						<div style={{width:"25%",height:"350px",position:"absolute",marginLeft:this.state.ml,backgroundColor:"white"}} onMouseEnter={this._mn_ent_mouse_chk} onMouseLeave={this._mm_gota_out_consultancy}>
+							{
+								this.state.hola.map( (a,b) => {
+										return (
+											<div key={b} style={{width:"100%",height:"60px"}} onMouseEnter={this._mm_enter_chk_unmt}>{a}</div>
+										)
+									} )
+							}
+						</div>
+					);
+				}
+			}
+
+
+			let sassForPHead={width:"100%",height:"100%"};
+			class PsudoHeadMainSPA extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						aboutBackCol:"white",
+						contactBackCol:"white",
+						dName:"Workoholic solution",
+						consultancyBackCol:"white",
+						bpoBackCol:"white",
+						priceBackCol:"white",
+						logoImg:"icon.jpg"
+					};
+					this._mm_mouse_ent_about=this._mm_mouse_ent_about.bind(this);
+					this._mm_mouseOut_about=this._mm_mouseOut_about.bind(this);
+					this._mm_mouse_ent_contact=this._mm_mouse_ent_contact.bind(this);
+					this._mm_mouseOut_contact=this._mm_mouseOut_contact.bind(this);
+					this._mm_mouse_ent_consultancy=this._mm_mouse_ent_consultancy.bind(this);
+					this._mm_mouseOut_consultancy=this._mm_mouseOut_consultancy.bind(this);
+					this._mm_mouse_ent_bpo=this._mm_mouse_ent_bpo.bind(this);
+					this._mm_mouseOut_bpo=this._mm_mouseOut_bpo.bind(this);
+					this._mm_mouse_ent_price=this._mm_mouse_ent_price.bind(this);
+					this._mm_mouseOut_price=this._mm_mouseOut_price.bind(this);
+				}
+				_mm_mouseOut_price(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							priceBackCol:"white"
+						});
+				}
+				_mm_mouse_ent_price(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							priceBackCol:"lightgrey"
+						});
+					console.log(document.getElementById('_js_root_animation_off').hasChildNodes())
+					if(document.getElementById('_js_root_animation_off').hasChildNodes()){
+						ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'))
+					}
+					let m=document.getElementById('_ref_to_logo').clientWidth;
+					let n=document.getElementById('_my_consultancy').clientWidth;
+					let l=document.getElementById('_my_bpo').clientWidth;
+					let mn=`${m+n+l-50}px`;
+					//console.log(m)
+					//console.log(n)
+					//console.log(mn)
+					ReactDOM.render(<BpoPopup Ml={mn} />,document.getElementById('_js_root_animation_off'));
+				}
+				_mm_mouseOut_bpo(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							bpoBackCol:"white"
+						});
+				}
+				_mm_mouse_ent_bpo(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							bpoBackCol:"lightgrey"
+						});
+					if(document.getElementById('_js_root_animation_off').hasChildNodes()){
+						ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'))
+					}
+					let m=document.getElementById('_ref_to_logo').clientWidth;
+					let n=document.getElementById('_my_consultancy').clientWidth;
+					let mn=`${m+n}px`;
+					//console.log(m)
+					//console.log(n)
+					//console.log(mn)
+					ReactDOM.render(<BpoPopup Ml={mn} />,document.getElementById('_js_root_animation_off'));
+				}
+				_mm_mouseOut_consultancy(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							consultancyBackCol:"white"
+						});
+				}
+				_mm_mouse_ent_consultancy(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							consultancyBackCol:"lightgrey"
+						});
+					if(document.getElementById('_js_root_animation_off').hasChildNodes()){
+						ReactDOM.unmountComponentAtNode(document.getElementById('_js_root_animation_off'))
+					}
+					let m=document.getElementById('_ref_to_logo').clientWidth;
+					//let n=document.getElementById('_ref_to_blank_area').clientWidth;
+					let mn=`${m}px`;
+					//console.log(m)
+					//console.log(n)
+					//console.log(mn)
+					ReactDOM.render(<ConsultancyPopUp Ml={mn} />,document.getElementById('_js_root_animation_off'));
+				}
+				_mm_mouseOut_contact(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							contactBackCol:"white"
+						});
+				}
+				_mm_mouse_ent_contact(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							contactBackCol:"lightgrey"
+						});
+				}
+				_mm_mouseOut_about(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							aboutBackCol:"white"
+						});
+				}
+				_mm_mouse_ent_about(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							aboutBackCol:"lightgrey"
+						});
+				}
+				render(){
+					return (
+						<div style={sassForPHead}>
+							<div id="_ref_to_logo" style={{width:"30%",height:"100%",display:"inline",float:"left"}}>
+								<div style={{width:"100%",height:"100%"}}>
+									<div style={{width:"40%",height:"100%",display:"inline",float:"left"}}>
+										<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+											<img src={this.state.logoImg} style={{width:"80%",height:"97%",borderRadius:"20%"}} />
+										</div>
+									</div>
+									<div style={{width:"60%",height:"100%",display:"inline",float:"right"}}>
+										<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+											<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={3}>{this.state.dName}</font></code>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style={{width:"70%",height:"100%",display:"inline",float:"right"}}>
+								<div style={{width:"100%",height:"50%"}}>
+								<div id="_ref_to_blank_area" style={{width:"20%",height:"100%",display:"inline",float:"left"}}>
+								</div>
+								<div style={{width:"80%",height:"100%",display:"inline",float:"right"}}>
+									<div style={{width:"100%",height:"100%"}}>
+										<div style={{width:"25%",height:"100%",display:"inline",float:"left"}}>
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+												<code style={{fontFamily:"cursive",cursor:"pointer",borderRadius:"5px",backgroundColor:this.state.aboutBackCol}}><font size={4} onMouseEnter={this._mm_mouse_ent_about} onMouseOut={this._mm_mouseOut_about}>> About Us</font></code>
+											</div>
+										</div>
+										<div style={{width:"25%",height:"100%",display:"inline",float:"left"}}>
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+												<code style={{fontFamily:"cursive",cursor:"pointer",borderRadius:"5px",backgroundColor:this.state.contactBackCol}}><font size={4} onMouseEnter={this._mm_mouse_ent_contact} onMouseOut={this._mm_mouseOut_contact}>> Contact Us</font></code>
+											</div>
+										</div>
+										<div style={{width:"25%",height:"100%",display:"inline",float:"left"}}>
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+												<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={4}>mob</font></code>
+											</div>
+										</div>
+										<div style={{width:"25%",height:"100%",display:"inline",float:"left"}}>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style={{width:"100%",height:"50%"}}>
+								<div style={{width:"100%",height:"100%"}}>
+									<div id="_my_consultancy" style={{width:"33.3%",height:"100%",display:"inline",float:"left"}}>
+										<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+											<code style={{fontFamily:"cursive",cursor:"pointer",borderRadius:"5px",backgroundColor:this.state.consultancyBackCol}}><font size={3} onMouseEnter={this._mm_mouse_ent_consultancy} onMouseOut={this._mm_mouseOut_consultancy}>Consultancy Services</font></code>
+										</div>
+									</div>
+									<div id="_my_bpo" style={{width:"33.3%",height:"100%",display:"inline",float:"left"}}>
+										<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+											<code style={{fontFamily:"cursive",cursor:"pointer",borderRadius:"5px",backgroundColor:this.state.bpoBackCol}}><font size={3} onMouseEnter={this._mm_mouse_ent_bpo} onMouseOut={this._mm_mouseOut_bpo}>Bpo Services</font></code>
+										</div>
+									</div>
+									<div style={{width:"33.3%",height:"100%",display:"inline",float:"left"}}>
+										<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+											<code style={{fontFamily:"cursive",cursor:"pointer",borderRadius:"5px",backgroundColor:this.state.priceBackCol}}><font size={3} onMouseEnter={this._mm_mouse_ent_price} onMouseOut={this._mm_mouseOut_price}>Pricing</font></code>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					);
+				}
+				
+			}
+			ReactDOM.render(<PsudoHeadMainSPA />,document.getElementById('_head_p'));
+		</script>
+	<div id="_body_p">
+		<div id="_show_image">
+		</div>
+		<script type="text/babel">
+			class SowOfImage extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						imgSrc:"Desert.jpg"
+					};
+				}
+				render(){
+					return (
+						<div style={{width:"100%",height:"400px"}}>
+							<img src={this.state.imgSrc} style={{width:"100%",height:"100%"}} />
+						</div>
+					);
+				}
+			}
+			ReactDOM.render(<SowOfImage />,document.getElementById('_show_image'));
+		</script>
+		<div id="_related_text">
+		</div>
+		<script type="text/babel">
+			class RelatedText extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						decoration:"none"
+					};
+					this._ent_for_underline=this._ent_for_underline.bind(this);
+					this._leave_for_undecoration=this._leave_for_undecoration.bind(this);
+				}
+				_leave_for_undecoration(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							decoration:"none"
+						});
+				}
+				_ent_for_underline(evt){
+					evt.preventDefault();
+					evt.stopPropagation();
+					this.setState({
+							decoration:"underline"
+						});
+				}
+				render(){
+					return (
+						<div style={{width:"100%",height:"250px",backgroundColor:"black"}}>
+							<div style={{width:"100%",height:"50%"}}>
+							</div>
+							<div style={{width:"100%",height:"50%"}}>
+								<div style={{width:"70%",height:"100%",display:"inline",float:"left"}}>
+									<div style={{width:"100%",height:"100%"}}>
+										<div style={{width:"10%",height:"100%",display:"inline",float:"left"}}>
+										</div>
+										<div style={{width:"90%",height:"100%",display:"inline",float:"right"}}>
+											<div style={{width:"100%",height:"100%"}}>
+												<code style={{fontFamily:"cursive"}}><font size={4} color="white">The fastest way to grow your business with the leader in </font></code><br />
+												<code style={{fontFamily:"cursive"}}><font size={6} color="#00aaff">Consultancy and BPO Outsourcing.</font></code><br />
+												<code style={{fontFamily:"cursive"}}><font size={3} color="grey">Check out our options and features included.</font></code>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style={{width:"30%",height:"100%",display:"inline",float:"right"}}>
+									<div style={{width:"100%",height:"100%"}}>
+										<div style={{width:"60%",height:"100%",display:"inline",float:"left"}}>
+											<div style={{width:"100%",height:"100%"}}>
+												<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+													<input type="button" style={{width:"95%",height:"50%",backgroundColor:"#006dcc",borderRadius:"20%",color:"white",fontFamily:"cursive",fontSize:"15px"}} value="Get Started Now!" />
+												</div>
+											</div>
+										</div>
+										<div style={{width:"40%",height:"100%",display:"inline",float:"right"}}>
+											<div style={{width:"100%",height:"100%"}}>
+												<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+													<code style={{fontFamily:"cursive"}}><font size={3} color="grey">or &nbsp;</font></code><code style={{fontFamily:"cursive",textDecoration:this.state.decoration,cursor:"pointer"}}><font size={3} color="grey" onMouseEnter={this._ent_for_underline} onMouseLeave={this._leave_for_undecoration}>{" learn more"}</font></code>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					);
+				}
+			}
+			ReactDOM.render(<RelatedText />,document.getElementById('_related_text'));
+		</script>
+		<div id="_trust_me_text">
+		</div>
+		<script type="text/babel">
+			class TrustMePlease extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						ab1:"Workoholic solution is",
+						ab2:"Innovative",
+						ab3:"and fully Trusted Partner",
+						cd1:"As experts in consultancy and bpo outsourcing,",
+						cd2:"Workoholic solution",
+						cd3:"is involved in every stage upon client selection of consultancy and bpo outsourcing from implementation to completion offering continual functional and technical support.."
+					};
+				}
+				render(){
+					return (
+						<div style={{width:"100%",marginTop:"50px"}} >
+							<div id="_ab" style={{width:"100%",textAlign:"center"}} >
+								<code style={{fontFamily:"cursive"}} ><font size={6} >{this.state.ab1}&nbsp;</font></code><span ><code style={{fontFamily:"cursive"}} ><font size={6} color="white" style={{backgroundColor:"#0088cc"}} >{this.state.ab2}</font></code></span><code style={{fontFamily:"cursive"}} ><font size={6} >&nbsp;{this.state.ab3}</font></code>
+							</div>
+							<div id="_cd" style={{width:"100%",textAlign:"center"}} >
+								<code style={{fontFamily:"cursive"}} ><font size={5} >{this.state.cd1}&nbsp;</font></code><span ><code style={{fontFamily:"cursive"}} ><font size={6} color="#0088cc" >{this.state.cd2}</font></code></span><code style={{fontFamily:"cursive"}} ><font size={5} >&nbsp;{this.state.cd3}</font></code>
+							</div>
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(<TrustMePlease />,document.getElementById('_trust_me_text'));
+		</script>
+		<div id="_trust_image">
+		</div>
+		<div id="_our_services">
+		</div>
+		<script type="text/babel">
+			class OurServices extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						oS:"Our Services",
+						consultancyLogo:"bc.jpg",
+						bcText:"Business Consultancy",
+						bcInnerText:"All business related help and support.",
+						bpoLogo:"bpo.jpg",
+						bpoText:"BPO",
+						bpoInnerText:"All features of BPO support.",
+						webLogo:"website.jpg",
+						webText:"Website Design",
+						webInnerText:"Design with all brand new tech.",
+						csLogo:"cs.jpg",
+						csText:"Customer Support",
+						csInnerText:"We have dedicated team to support our customer.",
+						ldLogo:"logo.png",
+						ldText:"Logo Design",
+						ldInnerText:"Get your design globally famous.",
+						softLogo:"soft.jpg",
+						softText:"Software Developement",
+						softInnerText:"We have a group of software developers."
+					};
+				}
+				render(){
+					return (
+						<div style={{width:"100%",marginBottom:"50px"}} >
+							<div style={{width:"100%",height:"100px",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+								<code style={{fontFamily:"cursive"}} ><font size={6} >{this.state.oS}</font></code>
+							</div>
+							<div style={{width:"100%"}} >
+								<div style={{width:"33.3%",display:"inline",float:"left"}} >
+									<div style={{width:"100%",height:"100px"}} >
+										<div id="_ll_logo_1" style={{width:"30%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+												<img src={this.state.consultancyLogo} style={{width:"90%",height:"90%",verticalAlign:"center",borderRadius:"50%"}} />
+											</div>
+										</div>
+										<div id="_ll_text_1" style={{width:"70%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%"}} >
+												<div style={{width:"100%",height:"40%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={5} color="#0088cc" ><b>{this.state.bcText}</b></font></code>
+												</div>
+												<div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive"}}><font size={3} ><b><em>{this.state.bcInnerText}</em></b></font></code>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style={{width:"33.3%",display:"inline",float:"left"}} >
+									<div style={{width:"100%",height:"100px"}} >
+										<div id="_ll_logo_2" style={{width:"30%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+												<img src={this.state.bpoLogo} style={{width:"90%",height:"90%",verticalAlign:"center",borderRadius:"50%"}} />
+											</div>
+										</div>
+										<div id="_ll_text_2" style={{width:"70%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%"}} >
+												<div style={{width:"100%",height:"40%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={5} color="#0088cc" ><b>{this.state.bpoText}</b></font></code>
+												</div>
+												<div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive"}}><font size={3} ><b><em>{this.state.bpoInnerText}</em></b></font></code>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style={{width:"33.3%",display:"inline",float:"left"}} >
+									<div style={{width:"100%",height:"100px"}} >
+										<div id="_ll_logo_3" style={{width:"30%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+												<img src={this.state.webLogo} style={{width:"90%",height:"90%",verticalAlign:"center",borderRadius:"50%"}} />
+											</div>
+										</div>
+										<div id="_ll_text_3" style={{width:"70%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%"}} >
+												<div style={{width:"100%",height:"40%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={5} color="#0088cc" ><b>{this.state.webText}</b></font></code>
+												</div>
+												<div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive"}}><font size={3} ><b><em>{this.state.webInnerText}</em></b></font></code>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style={{width:"100%"}} >
+								<div style={{width:"33.3%",display:"inline",float:"left",marginTop:"50px",marginBottom:"50px"}} >
+									<div style={{width:"100%",height:"100px"}} >
+										<div id="_ll_logo_4" style={{width:"30%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+												<img src={this.state.csLogo} style={{width:"90%",height:"90%",verticalAlign:"center",borderRadius:"50%"}} />
+											</div>
+										</div>
+										<div id="_ll_text_4" style={{width:"70%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%"}} >
+												<div style={{width:"100%",height:"40%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={5} color="#0088cc" ><b>{this.state.csText}</b></font></code>
+												</div>
+												<div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive"}}><font size={3} ><b><em>{this.state.csInnerText}</em></b></font></code>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style={{width:"33.3%",display:"inline",float:"left",marginTop:"50px",marginBottom:"50px"}} >
+									<div style={{width:"100%",height:"100px"}} >
+										<div id="_ll_logo_5" style={{width:"30%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+												<img src={this.state.ldLogo} style={{width:"90%",height:"90%",verticalAlign:"center",borderRadius:"50%"}} />
+											</div>
+										</div>
+										<div id="_ll_text_5" style={{width:"70%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%"}} >
+												<div style={{width:"100%",height:"40%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={5} color="#0088cc" ><b>{this.state.ldText}</b></font></code>
+												</div>
+												<div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive"}}><font size={3} ><b><em>{this.state.ldInnerText}</em></b></font></code>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style={{width:"33.3%",display:"inline",float:"left",marginTop:"50px",marginBottom:"50px"}} >
+									<div style={{width:"100%",height:"100px"}} >
+										<div id="_ll_logo_6" style={{width:"30%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+												<img src={this.state.softLogo} style={{width:"90%",height:"90%",verticalAlign:"center",borderRadius:"50%"}} />
+											</div>
+										</div>
+										<div id="_ll_text_6" style={{width:"70%",height:"100%",display:"inline",float:"left"}} >
+											<div style={{width:"100%",height:"100%"}} >
+												<div style={{width:"100%",height:"40%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={5} color="#0088cc" ><b>{this.state.softText}</b></font></code>
+												</div>
+												<div style={{width:"100%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}} >
+													<code style={{fontFamily:"cursive"}}><font size={3} ><b><em>{this.state.softInnerText}</em></b></font></code>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					);
+				}
+			}
+			ReactDOM.render(<OurServices />,document.getElementById('_our_services'));
+		</script>
+		<div id="_our_achievements">
+		</div>
+		<script type="text/babel">
+			class OurAcievements extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						aText:"We are the top player in IT Industry ..",
+						acText:"5,000+ customers in 12 countries use Workoholic solution. Our some Customers are..."
+					}
+				}
+				render(){
+					return (
+						<div style={{width:"100%"}} >
+							<div style={{width:"100%",height:"100px",display:"flex",justifyContent:"center",alignItems:"center"}} >
+								<code style={{fontFamily:"cursive"}}><font size={7} >{this.state.aText}</font></code>
+							</div>
+							<div style={{width:"100%",height:"100px",display:"flex",justifyContent:"center",alignItems:"center"}} >
+								<code style={{fontFamily:"cursive"}}><font size={5} color="#0088cc" >{this.state.acText}</font></code>
+							</div>
+							<div style={{width:"100%",height:"250px"}} >
+								<div style={{width:"20%",height:"100%",display:"inline",float:"left"}} >
+									<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+										1
+									</div>
+								</div>
+								<div style={{width:"20%",height:"100%",display:"inline",float:"left"}} >
+									<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+										2
+									</div>
+								</div>
+								<div style={{width:"20%",height:"100%",display:"inline",float:"left"}} >
+									<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+										3
+									</div>
+								</div>
+								<div style={{width:"20%",height:"100%",display:"inline",float:"left"}} >
+									<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+										4
+									</div>
+								</div>
+								<div style={{width:"20%",height:"100%",display:"inline",float:"left"}} >
+									<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+										5
+									</div>
+								</div>
+							</div>
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(<OurAcievements />,document.getElementById('_our_achievements'));
+		</script>
+		<div id="_achievements_image_fake">
+		</div>
+		<script type="text/babel">
+			class FakeImage extends React.Component{
+				constructor(props){
+					super(props);
+					this.state = {
+						fakeSrc:"globe.png"
+					};
+				}
+				render(){
+					return (
+						<div style={{width:"100%",height:"400px"}} >
+							<img src={this.state.fakeSrc} style={{width:"100%",height:"100%"}} />
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(<FakeImage />,document.getElementById('_achievements_image_fake'))
+		</script>
+		<div id="_client_say">
+		</div>
+		<script type="text/babel">
+			class ClientSay extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						openion:"what client say about us..?",
+						all:[{name:"Ajay Jha",message:"Workoholicsolution is just so great that they traet all their customers as their very first priority",logo:"a.jpg"},{name:"Bikky gupta",message:"My experieence with Workoholicsolution is so best that i love work with them again",logo:"c.jpg"}],
+						mapper:[{name:"Ajay Jha",message:"Workoholicsolution is just so great that they traet all their customers as their very first priority",logo:"a.jpg"}],
+						intr:""
+					};
+					this.componentDidMount=this.componentDidMount.bind(this);
+				}
+				componentDidMount(){
+				console.log(JSON.stringify(this.state.mapper[0])===JSON.stringify(this.state.all[0]));
+					var x=setInterval(function(){ 
+						if(JSON.stringify(this.state.mapper[0])===JSON.stringify(this.state.all[0])){
+							//console.log("if");
+							let ar=[];
+							ar.push(this.state.all[1]);
+							this.setState({
+								mapper:ar
+							});
+						}else{
+							//console.log("else");
+							let ar=[];
+							ar.push(this.state.all[0]);
+							this.setState({
+								mapper:ar
+							});
+						}
+					 }.bind(this), 3000);
+				}
+				render(){
+					return (
+						<div style={{width:"100%",textAlign:"center",marginTop:"20px"}} >
+							<div className="arrow_box">
+								<code style={{fontFamily:"cursive"}} ><font size={7} color="white" >{this.state.openion}</font></code>
+							</div>
+							<div style={{width:"100%",height:"300px",display:"flex",justifyContent:"center",alignItems:"center"}} >
+								{
+									this.state.mapper.map( (a,b) => {
+											return (
+												<div key={b} style={{width:"50%",height:"60%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+													<div style={{width:"40%",height:"100%"}} >
+														<img src={a.logo} style={{width:"100%",height:"100%"}} />
+													</div>
+													<div style={{width:"40%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+														<div className="arrow_box_left" style={{marginLeft:"50px"}}>
+															<code style={{fontFamily:"cursive"}} ><font size={4} color="white" >{a.message}</font></code><br /><br /><code style={{fontFamily:"cursive"}} ><font size={5} color="white" >{a.name.split(' ')[0]}</font></code>
+														</div>
+													</div>
+												</div>
+											)
+									} )
+								}
+							</div>
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(<ClientSay />,document.getElementById('_client_say'))
+		</script>
+		<div id="_disclaimer">
+		</div>
+		<script type="text/babel">
+			class DisclaimerText extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						dText:this.props.Dtext,
+						dMtext:"DISCLAIMER"
+					}
+				}
+				render(){
+					return (
+						<div style={{width:"100%",textAlign:"center",backgroundColor:"black"}} >
+							<div style={{width:"100%",height:"100px"}}>
+								<div style={{width:"15%",height:"100%",display:"inline",float:"left"}} >
+									
+								</div>
+								<div style={{width:"85%",height:"100%",display:"inline",float:"right"}} >
+									<div style={{width:"100%",height:"100px",display:"flex",justifyContent:"flex-start",alignItems:"center"}} >
+										<code style={{fontFamily:"cursive"}}><font size={8} color="white">{this.state.dMtext}</font></code>
+									</div>
+								</div>
+							</div>
+							<div style={{width:"100%",backgroundColor:"black"}}>
+								<div id="_color_changer" style={{width:"15%",display:"inline",float:"left",backgroundColor:"black",marginBottom:"30px"}}  >
+									
+								</div>
+								<div id="_ref_to_changer" style={{width:"85%",display:"inline",float:"right",backgroundColor:"black",marginBottom:"30px"}} ref={
+									() => {
+										document.getElementById('_color_changer').style.height=document.getElementById('_ref_to_changer').clientHeight+"px";
+									}
+								} >
+									<div style={{width:"100%",display:"flex",justifyContent:"flex-start",alignItems:"center"}} >
+										<code style={{fontFamily:"cursive"}}><font size={4} color="lightgrey">{this.state.dText}</font></code>
+									</div>
+								</div>
+							</div>
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(<DisclaimerText Dtext={`Please Note:
+We have recently received information that a group of unknown persons is impersonating Workoholicsolution employees. These individuals call from a blocked or unknown number and ask to gain access to your computer and that monies be transferred to them via Western Union,Moneygram etc or to Foreign Bank Accounts. They have also been claiming that Workoholicsolution is going out of bussiness. This is a SCAM.
+`} />,document.getElementById('_disclaimer'));
+		</script>
+		<div id="_our_address">
+		</div>
+		<script type="text/babel">
+			class OurAddress extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						addText:this.props.AddText,
+						addMtext:"Our Address",
+						contText:"Contact Us",
+						phoneAllText:this.props.Phone,
+						emailText:this.props.Email
+					};
+				}
+				render(){
+					return (
+						<div style={{width:"100%",textAlign:"center",backgroundColor:"black"}} >
+							<div style={{width:"100%",height:"100px",backgroundColor:"black"}}>
+								<div style={{width:"16%",height:"100%",display:"inline",float:"left",backgroundColor:"black"}} >
+									
+								</div>
+								<div style={{width:"42%",height:"100%",display:"inline",float:"left",backgroundColor:"black"}} >
+									<div style={{width:"100%",height:"100px",display:"flex",justifyContent:"flex-start",alignItems:"center"}} >
+										<code style={{fontFamily:"cursive"}}><font size={8} color="white">{this.state.addMtext}</font></code>
+									</div>
+								</div>
+								<div style={{width:"42%",height:"100%",display:"inline",float:"right",backgroundColor:"black"}} >
+									<div style={{width:"100%",height:"100px",display:"flex",justifyContent:"flex-start",alignItems:"center"}} >
+										<code style={{fontFamily:"cursive"}}><font size={8} color="white">{this.state.contText}</font></code>
+									</div>
+								</div>
+							</div>
+							<div style={{width:"100%",backgroundColor:"black"}}>
+								<div id="_color_changer_add" style={{width:"15%",display:"inline",float:"left",backgroundColor:"black"}}  >
+									
+								</div>
+								<div id="_ref_to_changer_add" style={{width:"25%",display:"inline",float:"left",backgroundColor:"black"}} ref={
+									() => {
+										document.getElementById('_color_changer_add').style.height=document.getElementById('_ref_to_changer_add').clientHeight+"px";
+										document.getElementById('_ref_to_changer_add_next').style.height=document.getElementById('_ref_to_changer_add').clientHeight+"px";
+									}
+								} >
+									<div style={{width:"100%"}} >
+										<code style={{fontFamily:"cursive"}}><font size={4} color="lightgrey">{this.state.addText}</font></code>
+									</div>
+								</div>
+								<div id="_ref_to_changer_add_next" style={{width:"60%",display:"inline",float:"right",backgroundColor:"black"}}>
+									<div style={{width:"100%"}} >
+										<div style={{width:"30%",display:"inline",float:"left"}} >
+											
+										</div>
+										<div style={{width:"70%",display:"inline",float:"right"}} >
+											<code style={{fontFamily:"cursive"}} ><font size={4} color="lightgrey" >{`Phone - ${this.state.phoneAllText}`}</font></code><br />
+											<code style={{fontFamily:"cursive"}} ><font size={4} color="lightgrey" >{`Email - ${this.state.emailText}`}</font></code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(<OurAddress AddText={`Address: 492 Coloumbia Turnpike, New Lebanon New York 12125, USA 
+(adjacent to Post Office)
+
+16192 Coastal Highway Lewes Delaware 19958, USA`} Phone={` (US) : 1-518-824-5800`} Email={`workoholicsolution@gmail.com`} />,document.getElementById('_our_address'));
+		</script>
+		<div id="_follow_us">
+		</div>
+		<script type="text/babel">
+			class FollowUs extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						obMapper:this.props.Mapper
+					};
+				}
+				render(){
+					return (
+						<div style={{width:"100%",backgroundColor:"black"}} >
+							<div style={{width:"100%",height:"100px"}} >
+								<div style={{ width:"20%",height:"100%",display:"inline",float:"left",backgroundColor:"black"}} >
+								
+								</div>
+								<div style={{ width:"80%",height:"100%",display:"inline",float:"right",backgroundColor:"black"}} >
+									<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"flex-start",alignItems:"center",backgroundColor:"black"}} >
+										<code style={{fontFamily:"cursive"}} ><font size={8} color="white" >Follow Us</font></code>
+									</div>
+								</div>
+							</div>
+							<div style={{width:"100%",height:"100px"}}>
+								<div style={{ width:"20%",height:"100%",display:"inline",float:"left",backgroundColor:"black"}} >
+								
+								</div>
+								<div style={{ width:"80%",height:"100%",display:"inline",float:"right",backgroundColor:"black"}} >
+									<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"flex-start",alignItems:"center",backgroundColor:"black"}} >
+										{
+											this.state.obMapper.map( (a,b) => {
+													return (
+														<div key={b} style={{width:"70px",height:"70px",borderRadius:"50%",marginLeft:"50px"}} >
+															<input type="hidden" name="_ok_lol_hid" value={JSON.stringify(a)} />
+															<img src={a.icon} style={{width:"100%",height:"100%"}} />
+														</div>
+													)
+											} )
+										}
+									</div>
+								</div>
+							</div>
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(<FollowUs Mapper={[{icon:"fb.png",url:"https://www.facebook.com/workoholicsolution"},{icon:"twiter.png",url:"https://www.twiter.com/workoholicsolution"},{icon:"link.png",url:"https://www.linkedin.com/workoholicsolution"}]} />,document.getElementById('_follow_us'))
+		</script>
+		<div id="_our_policies">
+		</div>
+		<script type="text/babel">
+			class OurPolicies extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {
+						logo:"icon.jpg",
+						copyright:this.props.Copyright,
+						mapper:this.props.Mapper
+					};
+				}
+				render(){
+					return(
+						<div style={{width:"100%"}} >
+							<div style={{width:"20%",height:"150px",display:"inline",float:"left"}} >
+								<div style={{width:"100%",height:"100%",display:"inline"}} >
+									<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"black"}} >
+										<img src={this.state.logo} style={{width:"60%",height:"90%",borderRadius:"5%"}} />
+									</div>
+									
+								</div>
+							</div>
+							<div style={{width:"40%",height:"150px",display:"inline",float:"left"}} >
+								<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"black"}} >
+									<code style={{fontFamily:"cursive"}}><font size={4} color="lightgrey" >{this.state.copyright}</font></code>
+								</div>
+							</div>
+							<div style={{width:"40%",height:"150px",display:"inline",float:"right"}} >
+								<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"black"}} >
+									{
+										this.state.mapper.map( (a,b) => {
+												return (
+													<span key={b} style={{paddingRight:"20px",borderRight:"1px solid white",marginLeft:"10px"}} >
+														<code style={{fontFamily:"cursive",cursor:"pointer"}}><font size={4} color="lightgrey" >{a}</font></code>
+													</span>
+												)
+										} )
+									}
+								</div>
+							</div>
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(<OurPolicies Copyright={"Maintained By Copyright 2017 by workoholicsolution Inc."} Mapper={["Privacy Policy","RefundPolicy","Sitemap","Contact"]} />,document.getElementById('_our_policies'))
+		</script>
+	</div>
+</body>
+</html>
